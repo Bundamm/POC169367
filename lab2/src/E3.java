@@ -11,6 +11,6 @@ public class E3 {
     public static int generateRandomIntInRange(int a, int b){
         Random random = new Random();
         //setseed może się przydać jak chcę określone wyniki.
-        return random.nextInt(a,b);
+        return random.nextInt(a,b+1);
     }
 }
