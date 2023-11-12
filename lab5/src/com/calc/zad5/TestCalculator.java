@@ -6,6 +6,6 @@ public class TestCalculator {
         int odejmowanie = Calculator.odejmowanie(5,9);
         int mnozenie = Calculator.mnozenie(5,8);
         double dzielenie = Calculator.dzielenie(10,2);
-        
+
     }
 }
