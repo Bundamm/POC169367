@@ -47,6 +47,7 @@ public class School {
                 " Name: " + this.name +
                 ", Adress: " + address +
                 ", Students: " + students;
+
     }
 
 

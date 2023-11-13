@@ -1,5 +1,6 @@
 import education.*;
 public class TestSchool {
+
     public static void main(String[] args) {
         School s1 = new School("", "", -300);
         School s2 = new School("UWM", "ul. Słoneczna 54, 10-710 Olsztyn", 1);
