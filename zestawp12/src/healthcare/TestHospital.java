@@ -3,7 +3,7 @@ package healthcare;
 public class TestHospital {
     public static void main(String[] args) {
         Hospital h1 = new Hospital("Centralny Szpital Kliniczny", "ul. Zdrowia 100, 00-001 Warszawa", 200);
-        Hospital h2 = new Hospital("Centralny Szpital Kliniczny", "", 200);
+        Hospital h2 = new Hospital("Centralny Szpital Kliniczny", "", 201);
         Hospital h3 = new Hospital("", "ul. Zdrowia 100, 00-001 Warszawa", 200);
         Hospital h4 = new Hospital("Centralny Szpital Kliniczny", "ul. Zdrowia 100, 00-001 Warszawa", -10);
         Hospital h5 = new Hospital(new String("Centralny Szpital Kliniczny"), "ul. Zdrowia 100, 00-001 Warszawa", -20);
