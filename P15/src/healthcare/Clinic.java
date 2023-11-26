@@ -36,6 +36,9 @@ public class Clinic extends Hospital{
         double cap = getCapacity() + n;
         if(cap > 500.0) cap = 500;
         setCapacity(cap);
+        rating+=0.5;
+        if(rating > 5.0) rating = 5.0;
+
     }
 
     @Override

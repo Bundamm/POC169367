@@ -14,5 +14,7 @@ public class TestSchool {
         u1.recruitment(20000);
         System.out.println(u1.toString());
 
+        System.out.println(u2.toString());
+
     }
 }

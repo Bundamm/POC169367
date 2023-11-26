@@ -6,8 +6,8 @@ public class Hospital {
     private int patients;
 
     public Hospital(String name, String address, int patients) {
-        this.name = (name.isEmpty() || name == null) ? "Centralny Szpital Kliniczny" : name;
-        this.address = (address.isEmpty() || address == null) ? "ul. Zdrowia 100, 00-001 Warszawa" : address;
+        this.name = (name == null || name.isEmpty()) ? "Centralny Szpital Kliniczny" : name;
+        this.address = (address == null || address.isEmpty()) ? "ul. Zdrowia 100, 00-001 Warszawa" : address;
         this.patients = (patients <= 0) ? 200 : patients;
     }
 
@@ -16,7 +16,7 @@ public class Hospital {
     }
 
     public void setName(String name) {
-        if(!name.isEmpty() && name != null){
+        if(name != null && !name.isEmpty()){
             this.name = name;
         }
 
@@ -27,7 +27,7 @@ public class Hospital {
     }
 
     public void setAddress(String address) {
-        if(!address.isEmpty() && address!= null){
+        if(address!= null && !address.isEmpty() ){
             this.address = address;
         }
 
@@ -45,7 +45,7 @@ public class Hospital {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + ": Name: "+ name +". Adress: "+ address+". Number of patients: "+patients;
+        return getClass().getSimpleName() + ": Name: "+ name +". Adress: "+ address+". Number of patients: "+patients+".";
     }
 
     @Override

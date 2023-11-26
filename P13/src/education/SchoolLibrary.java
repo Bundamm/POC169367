@@ -41,7 +41,9 @@ public class SchoolLibrary extends Library{
     @Override
     public boolean equals(Object o) {
         if (!super.equals(o)) return false;
+
         SchoolLibrary that = (SchoolLibrary) o;
+
         return schoolType.equals(that.schoolType);
     }
 
@@ -49,7 +51,6 @@ public class SchoolLibrary extends Library{
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + schoolType.hashCode();
-        result = 31 * result + librarians;
         return result;
     }
 }

@@ -52,15 +52,13 @@ public class Library {
         if (o == null || getClass() != o.getClass()) return false;
 
         Library library = (Library) o;
+
         return location.equals(library.location);
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + location.hashCode();
-        result = 31 * result + books;
-        return result;
+        return location.hashCode();
     }
 
     public void addBooks(int n){

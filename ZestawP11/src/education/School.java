@@ -6,8 +6,8 @@ public class School {
     private int students;
 
     public School(String name, String address, int students) {
-        this.name = (name != null && name.isEmpty()) ? "Wydział Matematyki i Informatyki UWM" : name;
-        this.address = (address != null && address.isEmpty()) ? "ul. Słoneczna 54, 10-710 Olsztyn" : address;
+        this.name = (name.isEmpty()) ? "Wydział Matematyki i Informatyki UWM" : name;
+        this.address = (address.isEmpty()) ? "ul. Słoneczna 54, 10-710 Olsztyn" : address;
         this.students = (students <= 0) ? 100 : students;
     }
 
@@ -30,7 +30,7 @@ public class School {
     }
 
     public void setAddress(String address) {
-        if(address != null && !address.isEmpty()){
+        if(!address.isEmpty()){
             this.address = address;
         }
     }

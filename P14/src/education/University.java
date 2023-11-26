@@ -28,8 +28,7 @@ public class University extends School{
 
     @Override
     public String toString() {
-        if(getName() != null && !getName().isEmpty()) return super.toString() + "\n" + "Type: " + type+". Number of fields of study: "+ studies+".";
-        return getClass().getSimpleName() +": Adress: "+getAddress()+". Number of students: "+getStudents()+".\n"+"Type: "+type+". Number of fields of study: "+studies+".";
+        return super.toString() + "\n" + "Type: " + type+". Number of fields of study: "+ studies+".";
     }
 
     @Override

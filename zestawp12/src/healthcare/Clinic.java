@@ -6,7 +6,7 @@ public class Clinic extends Hospital{
 
     public Clinic(String name, String address, int patients, String specialization, int doctors) {
         super(name, address, patients);
-        this.specialization = (specialization.isEmpty() || specialization == null) ? "ogólna" : specialization;
+        this.specialization = (specialization == null || specialization.isEmpty()) ? "ogólna" : specialization;
         this.doctors = doctors < 0 ? 20 : doctors;
     }
 
@@ -29,7 +29,7 @@ public class Clinic extends Hospital{
     @Override
     public String toString() {
         return super.toString() +
-                " Specialization: "+ specialization+". Number of doctors: " + doctors;
+                " Specialization: "+ specialization+". Number of doctors: " + doctors+".";
     }
 
     @Override
