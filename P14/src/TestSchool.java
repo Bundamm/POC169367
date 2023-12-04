@@ -1,4 +1,8 @@
 import education.*;
+
+import javax.swing.*;
+import java.util.Scanner;
+
 public class TestSchool {
     public static void main(String[] args) {
         School s1 = new School("name", "address",200);
@@ -15,6 +19,7 @@ public class TestSchool {
         System.out.println(u1.toString());
 
         System.out.println(u2.toString());
+
 
     }
 }
