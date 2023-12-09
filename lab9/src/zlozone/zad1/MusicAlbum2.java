@@ -66,4 +66,21 @@ public class MusicAlbum2 {
         result = 31 * result + Arrays.hashCode(ratings);
         return result;
     }
+
+    public void addRating(Double rating){
+        double[] rat = new double[ratings.length+1];
+        for(int i = 0; i < ratings.length-1; i++){
+            rat[i] = ratings[i];
+        }
+        rat[rat.length-1] = rating;
+        ratings = rat;
+    }
+
+    public void remRating(int index){
+        double[] res = new double[ratings.length-1];
+        for(int i = 0; i < res.length; i++){
+            res[i] = ratings[i<index ? i : i + 1];
+        }
+        ratings = res;
+    }
 }
