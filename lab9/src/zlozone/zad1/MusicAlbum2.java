@@ -69,10 +69,10 @@ public class MusicAlbum2 {
 
     public void addRating(Double rating){
         double[] rat = new double[ratings.length+1];
-        for(int i = 0; i < ratings.length-1; i++){
+        for(int i = 0; i < ratings.length; i++){
             rat[i] = ratings[i];
         }
-        rat[rat.length-1] = rating;
+        rat[ratings.length] = rating;
         ratings = rat;
     }
 

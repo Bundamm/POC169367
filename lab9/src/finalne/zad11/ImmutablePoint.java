@@ -1,25 +1,25 @@
 package finalne.zad11;
 
-public class ImmutablePoint {
-    private int x;
-    private int y;
-    private int z;
+public final class ImmutablePoint {
+    private final double x;
+    private final double y;
+    private final double z;
 
-    public ImmutablePoint(int x, int y, int z) {
+    public ImmutablePoint(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public int getZ() {
+    public double getZ() {
         return z;
     }
 
@@ -39,18 +39,26 @@ public class ImmutablePoint {
 
         ImmutablePoint that = (ImmutablePoint) o;
 
-        if (x != that.x) return false;
-        if (y != that.y) return false;
-        return z == that.z;
+        if (Double.compare(x, that.x) != 0) return false;
+        if (Double.compare(y, that.y) != 0) return false;
+        return Double.compare(z, that.z) == 0;
     }
 
     @Override
     public int hashCode() {
-        int result = x;
-        result = 31 * result + y;
-        result = 31 * result + z;
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(x);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(y);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(z);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
     // nie jesteś w stanie zmodyfikować czyli spełnia bo nie ma żadnych metod na to pozwalających
-    
+
 }
+
+
