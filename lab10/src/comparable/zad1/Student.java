@@ -12,7 +12,16 @@ public class Student implements Comparable<Student>{
     }
 
     @Override
-    public int compareTo(Student o) {
-        return Double.compare(o.averageGrade, this.averageGrade);
+    public int compareTo(Student obj) {
+        return Double.compare(obj.averageGrade, this.averageGrade); // this pierwsze jest rosnące this drugie jest malejące
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", averageGrade=" + averageGrade +
+                ", yearOfBirth=" + yearOfBirth +
+                '}';
     }
 }
