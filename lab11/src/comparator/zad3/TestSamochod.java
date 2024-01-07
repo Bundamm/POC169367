@@ -11,7 +11,10 @@ public class TestSamochod {
                 new Samochod("Honda", 2022, 45000),
                 new Samochod("Toyota", 2013, 10000)
         };
-        Arrays.sort(samochody);
+        Arrays.sort(samochody, new CompareSamochod());
+        for(var samochod : samochody){
+            System.out.println(samochod.toString());
+        }
 
     }
 }

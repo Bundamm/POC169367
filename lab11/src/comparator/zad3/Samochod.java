@@ -1,8 +1,6 @@
 package comparator.zad3;
 
-import java.util.Comparator;
-
-public class Samochod implements Comparator<Samochod> {
+public class Samochod {
     private String marka;
     private int rokProdukcji;
     private double cena;
@@ -13,6 +11,17 @@ public class Samochod implements Comparator<Samochod> {
         this.cena = cena;
     }
 
+    public String getMarka() {
+        return marka;
+    }
+
+    public int getRokProdukcji() {
+        return rokProdukcji;
+    }
+
+    public double getCena() {
+        return cena;
+    }
 
     @Override
     public String toString() {
@@ -23,8 +32,4 @@ public class Samochod implements Comparator<Samochod> {
                 '}';
     }
 
-    @Override
-    public int compare(Samochod o1, Samochod o2) {
-        return Integer.compare(o1.rokProdukcji, o2.rokProdukcji);
-    }
 }
