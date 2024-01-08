@@ -5,7 +5,7 @@ public class zad15 {
         Integer[] intArray = {3,8,5,3};
         System.out.println("Najw wartosc w tablicy int: "+ maxValue(intArray));
 
-        String[] strArray = {"sxac","dawfda","fasdxa","saasd"};
+        String[] strArray = {"aaa","ddd","zzz","ccc"};
         System.out.println("Najw wartosc w tablicy str: "+ maxValue(strArray));
 
         Vehicle[] vehicles = {
@@ -16,9 +16,8 @@ public class zad15 {
         System.out.println("Najszybszy pojazd: "+ maxValue(vehicles).toString());
     }
     public static <T extends Comparable<T>> T maxValue(T[] array){
-        if(array.length == 0) {
-            System.out.println("Pusta tablica.");
-            return null;
+        if(array == null || array.length == 0) {
+            throw new IllegalArgumentException("Tablica jest nullem lub jest pusta");
         }
         T max = array[0];
         for(T el : array){

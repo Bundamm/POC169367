@@ -1,10 +1,10 @@
 package zad22;
 
 public class TestCar {
+
     public static <T extends Car> boolean compareObjects(T object1, T object2){
         return object1.getClass().equals(object2.getClass());
     }
-
     public static void main(String[] args) {
         Car car1 = new Car("afwa");
         Car car2 = new Car("adsasda");
