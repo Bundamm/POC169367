@@ -12,7 +12,7 @@ public class Merge {
                 third.remove(key);
                 third.put(key, value2);
             }
-            th`ird.put(key, value2);
+            third.put(key, value2);
         }
         return third;
     }
