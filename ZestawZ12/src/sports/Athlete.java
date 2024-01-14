@@ -8,7 +8,7 @@ public class Athlete implements Cloneable{
 
     public Athlete(String name, double[] times) {
         this.name = name;
-        this.times = times;
+        this.times = times.clone();
     }
 
     public String getName() {
@@ -16,7 +16,7 @@ public class Athlete implements Cloneable{
     }
 
     public double[] getTimes() {
-        return times;
+        return times.clone();
     }
 
     @Override
