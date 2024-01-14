@@ -19,6 +19,14 @@ public class Athlete implements Cloneable{
         return times;
     }
 
+    public void setTime(double time, int index){
+        this.times = times.clone();
+        if(index >= 0 && index < times.length){
+            times[index] = time;
+        }
+        else throw new IllegalArgumentException("Index beyond limit");
+
+    }
     @Override
     public String toString() {
         return "Athlete{" +
@@ -28,7 +36,15 @@ public class Athlete implements Cloneable{
     }
 
     @Override
-    public Athlete clone() throws CloneNotSupportedException {
-        return (Athlete) super.clone();
+    public Athlete clone(){
+        try{
+            Athlete athlete = (Athlete) super.clone();
+            athlete.times = this.times.clone();
+            return athlete;
+        }catch(CloneNotSupportedException e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }
