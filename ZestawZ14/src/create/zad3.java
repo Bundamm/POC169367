@@ -3,10 +3,15 @@ package create;
 import java.lang.reflect.Array;
 
 public class zad3 {
-    public static <T> T[] createArray(T first, T second, T[] array){
-        array[0] = first;
-        array[1] = second;
-        return array;
+    public static <T> void createArray(T first, T second, T[] array){
+        if(array.length == 2){
+            array[0] = first;
+            array[1] = second;
+        }
+        else{
+            throw new IllegalArgumentException("Wymagana długość to 2");
+        }
+
     }
 
     public static void main(String[] args) {

@@ -1,11 +1,18 @@
 package sports;
 
+import javax.naming.ldap.StartTlsRequest;
 import java.util.Objects;
 
 public class AthleteProfile {
     private String athleteName;
     private String sport;
     private Stadium stadium;
+
+    public AthleteProfile(String athleteName, String sport, Stadium stadium) {
+        this.athleteName = athleteName;
+        this.sport = sport;
+        this.stadium = (stadium == null) ? new Stadium() : new Stadium(stadium);
+    }
 
     public String getAthleteName() {
         return athleteName;
@@ -24,11 +31,11 @@ public class AthleteProfile {
     }
 
     public Stadium getStadium() {
-        return stadium;
+        return new Stadium(stadium);
     }
 
     public void setStadium(Stadium stadium) {
-        this.stadium = stadium;
+        this.stadium = new Stadium(stadium);
     }
 
     @Override

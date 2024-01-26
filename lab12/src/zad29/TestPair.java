@@ -15,13 +15,19 @@ public class TestPair {
         System.out.println("Najwyższe drzewo: "+ result.getSecond());
     }
     public static void findMinMaxHeight(Tree[] trees, Pair<? super Tree> result){
-        if(trees == null || trees.length == 0){
-            return;
-        }
-        Arrays.sort(trees);
-        result.setFirst(trees[0]);
-        result.setSecond(trees[trees.length-1]);
+        Tree min = trees[0];
+        Tree max = trees[0];
 
+        for(var elem: trees){
+            if(elem.compareTo(min) < 0){
+                min = elem;
+            }
+            if(elem.compareTo(max) > 0){
+                max = elem;
+            }
+        }
+        result.setFirst(min);
+        result.setSecond(max);
     }
 
 }

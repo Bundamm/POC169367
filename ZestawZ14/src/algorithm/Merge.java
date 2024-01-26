@@ -1,32 +1,28 @@
 package algorithm;
 
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class Merge {
-    public static <K,V> HashMap<K,V> mergeMaps(HashMap<K,V> first, HashMap<K,V> second){
-        HashMap<K, V> third = new HashMap<>(first);
-        for(K key : second.keySet()){
-            V value2 = second.get(key);
-            if(first.containsKey(key)){
-                third.remove(key);
-                third.put(key, value2);
-            }
-            third.put(key, value2);
-        }
-        return third;
-    }
+    public static <K,V> Map<K,V> mergeMaps(Map<K,V> first, Map<K,V> second){
+        Map<K,V> result = new HashMap<>(first);
+        result.putAll(second);
+        return result;
 
+    }
     public static void main(String[] args) {
-        HashMap<Integer,String> xd = new HashMap<>();
+        Map<Integer,String> xd = new HashMap<>();
         xd.put(1, "aaa");
         xd.put(2, "bbb");
         xd.put(3,"raaa");
-        HashMap<Integer,String> xd2 = new HashMap<>();
+        Map<Integer,String> xd2 = new HashMap<>();
         xd2.put(3,"ccc");
         xd2.put(12,"ddd");
-        HashMap<Integer,String> xd3 = mergeMaps(xd,xd2);
-        System.out.println(xd3);
-
+        Map<Integer, String> result = mergeMaps(xd,xd2);
+//        for(Map.Entry<Integer,String> x : result.entrySet()){
+//            System.out.println(x.getKey() + " " + x.getValue());
+//        }
+        System.out.println(result);
     }
 }

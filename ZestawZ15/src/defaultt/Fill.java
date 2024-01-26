@@ -3,6 +3,9 @@ package defaultt;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 
 // nie da się nazwać pakietu default
@@ -19,11 +22,14 @@ public class Fill {
     }
 
     public static void main(String[] args) {
-        Collection<Integer> integerCollection = new ArrayList<Integer>();
+        Collection<Integer> integerCollection = new ArrayList<>();
         integerCollection.add(23);
         integerCollection.add(18);
         System.out.println(integerCollection);
         fillWithDefaultValue(integerCollection, 10);
         System.out.println(integerCollection);
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+
     }
 }

@@ -1,6 +1,6 @@
 package zad29;
 
-public class Tree extends Plant{
+public class Tree extends Plant implements Comparable<Plant>{
     private int height;
 
     public Tree(String name, int height) {
@@ -17,5 +17,10 @@ public class Tree extends Plant{
         return "Tree{" +
                 "height=" + height +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Plant o) {
+        return super.compareTo(o);
     }
 }

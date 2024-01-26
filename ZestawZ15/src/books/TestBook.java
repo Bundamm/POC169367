@@ -1,6 +1,7 @@
 package books;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestBook {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class TestBook {
         for(var book : books){
             System.out.println(book.toString());
         }
-        books.sort(null);
+        Collections.sort(books);
         for(var book : books){
             System.out.println(book.toString());
         }

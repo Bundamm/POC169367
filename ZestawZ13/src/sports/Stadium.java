@@ -15,6 +15,13 @@ public class Stadium {
         this.homeTeam = homeTeam;
     }
 
+    public Stadium() {
+
+    }
+    public Stadium(Stadium stadium){
+
+    }
+
     public String getName() {
         return name;
     }
